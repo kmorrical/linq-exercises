@@ -37,7 +37,7 @@ namespace LinqExercises.Test.Controllers
         {
             // ACT
             IHttpActionResult actionResult = _suppliersController.SearchSuppliers("rue");
-            var contentResult = actionResult as OkNegotiatedContentResult<IQueryable<Supplier>>;
+            var contentResult = actionResult as OkNegotiatedContentResult<IOrderedQueryable<Supplier>>;
 
             // ASSERT
             Assert.IsNotNull(contentResult);
